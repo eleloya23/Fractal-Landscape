@@ -434,8 +434,20 @@ box{ <-0.5,0,-1.3>,<1.5,-0.1,-1.4>    //escalon 1
         scale 0.2   
         }
             }
+
+box{ <-0.5,-0.2,-1.5>,<1.5,-0.3,-1.6>    //escalon 2
+    texture { pigment
+        { image_map
+        { png "wood3.png"
+           map_type 0
+         }     
+         rotate <00,0,0>
+        }
+        scale 0.2   
+        }
+            }
      
-cylinder{<2.2,0,1.2>,<2.2,-0.25,1.2>, 0.05
+cylinder{<2.2,0,1.2>,<2.2,-1.25,1.2>, 0.05
           texture { pigment
         { image_map
         { png "log1.png"
@@ -448,7 +460,7 @@ cylinder{<2.2,0,1.2>,<2.2,-0.25,1.2>, 0.05
      }
         
         
- cylinder{<2.2,0,-1.2>,<2.2,-0.25,-1.2>, 0.05
+ cylinder{<2.2,0,-1.2>,<2.2,-1.25,-1.2>, 0.05
           texture { pigment
         { image_map
         { png "log1.png"
@@ -460,7 +472,7 @@ cylinder{<2.2,0,1.2>,<2.2,-0.25,1.2>, 0.05
         }
         }
         
- cylinder{<-1.2,0,1.2>,<-1.2,-0.25,1.2>, 0.05
+ cylinder{<-1.2,0,1.2>,<-1.2,-1.25,1.2>, 0.05
           texture { pigment
         { image_map
         { png "log1.png"
@@ -472,7 +484,7 @@ cylinder{<2.2,0,1.2>,<2.2,-0.25,1.2>, 0.05
         }
         }
         
- cylinder{<-1.2,0,-1.2>,<-1.2,-0.25,-1.2>, 0.05
+ cylinder{<-1.2,0,-1.2>,<-1.2,-1.25,-1.2>, 0.05
           texture { pigment
         { image_map
         { png "log1.png"

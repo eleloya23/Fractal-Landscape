@@ -4,6 +4,7 @@
 #include "palm/palm.inc"
 #include "realskies.inc"
 #include "functions.inc"
+#include "house.inc"
 
 // some users may want to un-comment and adjust the following line to suit the brightness of their monitor
 //global_settings {  assumed_gamma 2.6}
@@ -16,7 +17,7 @@
 #declare WIDTH = HEIGHT*400/600;
 
 // Blur code : focal_point <0,5,-10> blur_samples 15 aperture .3
-camera {  location <1, 6, -15> look_at <1,0,0> }
+camera {  location <1, 6, -15> look_at <1,0,0> focal_point <4, 4.2, -9> blur_samples 30 aperture .15 }
 light_source { <30, 200, -150>, 1 }
 
 // Sphere
@@ -110,20 +111,12 @@ merge {
 
 }
 
+object {O_House 
   
-  
-
-
-// union 5
-//     object {
-//        quaking_aspen_13_stems
-//        pigment { color rgb <144/255, 104/255, 78/255> } // brown 
-//     }
-//     object {
-//        quaking_aspen_13_leaves
-//        pigment { color rgb <0, 1, 0> } // green 
-//     }
-// }
+  scale 0.4
+  rotate <10,20,0>
+  translate <0, 4.16, -9>
+  }
 
 //object{Desert rotate y*120 scale <12.5,9,10> translate <150,-1,240> texture{Sapphire_Agate scale 20}}        
 
