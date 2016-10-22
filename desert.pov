@@ -3,6 +3,7 @@
 #include "geomorph_txtr.inc"
 #include "palm/palm.inc"
 #include "realskies.inc"
+#include "functions.inc"
 
 // some users may want to un-comment and adjust the following line to suit the brightness of their monitor
 //global_settings {  assumed_gamma 2.6}
@@ -48,7 +49,7 @@ light_source { <30, 200, -150>, 1 }
 // Adding texture to desert
 object  {Desert  texture {sand1 scale 0.1 rotate y*45} }
 
-object{Desert translate <0, -1, 0>}
+
 
 // Adding palm tree
 union { 
@@ -63,12 +64,54 @@ union {
     }
   }
   rotate 90*y 
-  translate <6, 20, -40>
+  translate <22, 20, 2>
   scale .2
 }
 
 // Sky
 sky_sphere { sky_realsky_04 translate -0.15*y}
+
+// -+-+- Water -+-+-
+// Taken from realskies.inc example file
+
+merge {
+  plane {
+      y, 4.1
+      material {
+          texture {
+              pigment {
+                  color rgb <0.8, 0.9, 1>
+              }
+              finish {
+                  ambient 0.0
+                  diffuse 0.0
+
+                  reflection {
+                      0.2, 1.0
+                      fresnel on
+                  }
+
+                  specular 0.4
+                  roughness 0.003
+              }
+              normal {
+                  function {
+                      f_ridged_mf(x/9, y, z/5, 0.1, 3.0, 7, 0.7, 0.7, 2)
+                  } 0.6
+                  turbulence 2.5
+                  scale 0.13
+              }
+          }
+          interior { ior 1.3 }
+      }
+      bounded_by { box{<-2,4.2,30>, <13,4.2,-6>}}
+  }
+  object{Desert translate <0, -1, 0>}
+
+}
+
+  
+  
 
 
 // union 5
