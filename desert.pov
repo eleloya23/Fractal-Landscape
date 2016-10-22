@@ -2,6 +2,7 @@
 #include "textures.inc"
 #include "geomorph_txtr.inc"
 #include "palm/palm.inc"
+#include "realskies.inc"
 
 // some users may want to un-comment and adjust the following line to suit the brightness of their monitor
 //global_settings {  assumed_gamma 2.6}
@@ -19,8 +20,6 @@ light_source { <30, 200, -150>, 1 }
 
 // Sphere
 // sphere { <0,5,-10>, 1 pigment {Red}}
-
-sky_sphere {pigment{color rgb<0.19,0.3,0.8>}}  
 
 #declare texClouds = texture{
   pigment{
@@ -68,8 +67,11 @@ union {
   scale .2
 }
 
+// Sky
+sky_sphere { sky_realsky_02 translate -0.4*y}
 
-// union {
+
+// union 4
 //     object {
 //        quaking_aspen_13_stems
 //        pigment { color rgb <144/255, 104/255, 78/255> } // brown 
