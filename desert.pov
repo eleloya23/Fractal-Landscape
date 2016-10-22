@@ -68,10 +68,10 @@ union {
 }
 
 // Sky
-sky_sphere { sky_realsky_02 translate -0.4*y}
+sky_sphere { sky_realsky_04 translate -0.15*y}
 
 
-// union 4
+// union 5
 //     object {
 //        quaking_aspen_13_stems
 //        pigment { color rgb <144/255, 104/255, 78/255> } // brown 
