@@ -53,15 +53,32 @@ object{Desert translate <0, -1, 0>}
 
 // Adding palm tree
 union { 
-         object { palm_13_stems
-                pigment {color rgb 0.9} }
-         object { palm_13_leaves
-                texture { pigment {color rgb 1} 
-                          finish { ambient 0.15 diffuse 0.8 }}}
-         rotate 90*y 
-         translate <6, 20, -40>
-         scale .2
-       }
+  object { 
+    palm_13_stems
+    pigment {color rgb <144/255, 104/255, 78/255>} 
+  }
+  object { 
+    palm_13_leaves
+    texture { pigment {color rgb <0, 1, 0>} 
+      finish { ambient 0.15 diffuse 0.8 }
+    }
+  }
+  rotate 90*y 
+  translate <6, 20, -40>
+  scale .2
+}
+
+
+// union {
+//     object {
+//        quaking_aspen_13_stems
+//        pigment { color rgb <144/255, 104/255, 78/255> } // brown 
+//     }
+//     object {
+//        quaking_aspen_13_leaves
+//        pigment { color rgb <0, 1, 0> } // green 
+//     }
+// }
 
 //object{Desert rotate y*120 scale <12.5,9,10> translate <150,-1,240> texture{Sapphire_Agate scale 20}}        
 
